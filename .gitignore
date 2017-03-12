@@ -27,3 +27,25 @@
 *.exe
 *.out
 *.app
+
+MYCPPGAME*
+
+# 排除其他类型工程
+proj.linux
+proj.win8.1-universal
+proj.win32
+proj.ios_mac
+proj.android
+proj.android-studio
+proj.win10/UWPLuaGame.VC.db
+proj.win10/UWPLuaGame.VC.VC.opendb
+proj.win10/App/Generated Files
+proj.win10/ipch
+
+# 排除编译内容
+proj.win10/Debug
+proj.win10/x64
+proj.win10/ARM
+proj.win10/App/**/Debug
+cocos2d/**/Debug
+

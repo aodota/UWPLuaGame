@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <EngineRoot>$(MSBuildThisFileDirectory)..\..\</EngineRoot>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(EngineRoot)cocos;$(EngineRoot)cocos/editor-support;$(EngineRoot)cocos\platform\winrt;$(EngineRoot)external\glfw3\include\$(COCOS2D_PLATFORM);$(EngineRoot)external\$(COCOS2D_PLATFORM)-specific\gles\include\OGLES;$(EngineRoot)external\freetype2\include\$(COCOS2D_PLATFORM)\freetype2;$(EngineRoot)external\freetype2\include\$(COCOS2D_PLATFORM)\;$(EngineRoot)external</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WINRT;_VARIADIC_MAX=10;NOMINMAX;GL_GLEXT_PROTOTYPES;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_UNICODE;UNICODE;RAPIDJSON_ENDIAN=RAPIDJSON_LITTLEENDIAN;_USRJSSTATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>true</CompileAsWinRT>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <DisableSpecificWarnings>4056;4244;4251;4756;4453;28204;4099;</DisableSpecificWarnings>
+    </ClCompile>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <BuildMacro Include="EngineRoot">
+      <Value>$(EngineRoot)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
